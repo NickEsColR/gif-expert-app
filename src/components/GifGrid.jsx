@@ -2,18 +2,12 @@ import { useEffect, useState } from "react";
 
 import { getGifs } from "../helpers/getGifs";
 import { GifItem } from "./GifItem";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 export const GifGrid = ({ category }) => {
-    const [gifs, setGifs] = useState([]);
+    const {gifs,  isLoading} = useFetchGifs(category);
 
-    const initializeGifs = async () => {
-        const gifs = await getGifs(category);
-        setGifs(gifs);
-    };
 
-    useEffect(() => {
-        initializeGifs();
-    }, []);
 
     return (
         <>
