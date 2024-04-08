@@ -8,7 +8,7 @@ export const GifExpertApp = () => {
         // setCategories([...categories, "HunterXHunter"]); //opcion 1
         //setCategories(cats => [...cats, "HunterXHunter"]); //opcion 2
         setCategories((cats) =>
-            cats.includes("HunterXHunter") ? cats : [...cats, "HunterXHunter"]
+            cats.includes(newCategory) ? cats : [newCategory,...cats]
         ); //opcion 3 filtrando
     };
     return (
