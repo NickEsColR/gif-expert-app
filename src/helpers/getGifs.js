@@ -1,5 +1,5 @@
-export const getGifs = async () => {
-    const url = `${process.env.VITE_GIPHY_URL}?api_key?=${process.env.VITE_GIPHY_API_KEY}&q=${category}&limit=10`;
+export const getGifs = async (category) => {
+    const url = `${import.meta.env.VITE_GIPHY_URL}?api_key=${import.meta.env.VITE_GIPHY_KEY}&q=${category}&limit=10`;
     const resp = await fetch(url);
     const { data } = await resp.json();
 
