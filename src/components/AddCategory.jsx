@@ -15,7 +15,7 @@ export const AddCategory = ({ onNewCategory }) => {
     return (
         <form onSubmit={onSubmit} className="mt-5">
             <div className="row">
-                <div className="col-md-6 offset-3">
+                <div className="col-8 col-md-6 offset-md-2">
                     <input
                         type="text"
                         placeholder="Buscar gifs"
@@ -24,7 +24,7 @@ export const AddCategory = ({ onNewCategory }) => {
                         className="px-2 border rounded-3 form-control"
                     />
                 </div>
-                <div className="col-md-1">
+                <div className="col-1 col-md-1">
                     <input
                         type="submit"
                         value="Agregar"

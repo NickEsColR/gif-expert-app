@@ -1,6 +1,6 @@
 export const GifItem = ({ title, url }) => {
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 col-xl-3">
             <div className="card" style={{ height: "250px" }}>
                 <img src={url} alt={title} className="h-75" />
                 <div className="card-body">
